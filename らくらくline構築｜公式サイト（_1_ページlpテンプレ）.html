@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>らくらくLINE構築｜サンプルサイト</title>
+  <meta name="description" content="このページはサンプルです。LINE公式アカウントで“具体的に何ができるか”を、課題→解決→効果の流れで分かりやすく紹介します。">
+  <style>
+    :root{--bg1:#0b1020;--bg2:#141a33;--card:#121933;--ink:#ecf0ff;--muted:#9aa3c7;--brand:#6ea8ff;--accent:#a7ffb9}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--ink)}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:1120px;margin:auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{font-weight:800;font-size:20px;letter-spacing:.2px}
+    nav a{margin-left:20px;color:var(--muted)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#1e2a52;color:#c8d5ff;font-size:12px;border:1px solid rgba(255,255,255,.08)}
+    .hero{padding:64px 0 48px;text-align:center;background:
+      radial-gradient(900px 300px at 20% -10%,rgba(110,168,255,.18),transparent 60%),
+      radial-gradient(800px 300px at 100% 0,rgba(167,255,185,.12),transparent 50%)}
+    h1{font-size:34px;line-height:1.25;margin:8px 0 10px}
+    .lead{color:var(--muted);font-size:18px}
+    .btn{display:inline-block;padding:14px 28px;margin:10px;border-radius:30px;background:var(--brand);color:#071025;font-weight:bold;box-shadow:0 6px 20px rgba(110,168,255,.4)}
+    .btn.ghost{background:transparent;border:1px solid var(--brand);color:var(--brand)}
+    .section{padding:56px 0}
+    .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+    .card{background:var(--card);padding:22px;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.08)}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted)}
+    .step{position:relative;padding-left:44px;margin:18px 0}
+    .step::before{content:attr(data-n);position:absolute;left:0;top:0;width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(135deg,var(--brand),#8fffd0);color:#06122b;font-weight:900}
+    .compare{width:100%;border-collapse:separate;border-spacing:0 8px}
+    .compare th,.compare td{padding:12px 14px;background:#0f1630;border:1px solid rgba(255,255,255,.08)}
+    .compare th{background:#1a2143;text-align:left}
+    .tick{color:#7dffb0;font-weight:bold}
+    footer{padding:32px 0;color:#8fa0cc;text-align:center;font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">らくらくLINE構築 <span class="badge">このページはサンプルです</span></div>
+      <nav>
+        <a href="#problems">よくある課題</a>
+        <a href="#solutions">解決アプローチ</a>
+        <a href="#beforeafter">ビフォー/アフター</a>
+        <a href="#scenarios">業種別シナリオ</a>
+        <a href="#roadmap">90日ロードマップ</a>
+        <a href="#impact">導入効果</a>
+        <a href="#contact">連絡先</a>
+      </nav>
+    </header>
+
+    <!-- HERO / TOP CTA -->
+    <section class="hero">
+      <span class="badge">まずは体験から</span>
+      <h1>「何ができるか分からない」を解消。<br>LINEで解決できることを丸ごと体験。</h1>
+      <p class="lead">友だち追加すると、予約・クーポン・ステップ配信の“体験デモ”を受け取れます（自動配信）。</p>
+      <a class="btn" href="https://line.me/R/ti/p/%40609dabno">LINEで友だち追加</a>
+      <a class="btn ghost" href="#problems">詳しく見る</a>
+    </section>
+
+    <!-- PROBLEMS -->
+    <section class="section" id="problems">
+      <h2>導入前の“よくある課題”</h2>
+      <div class="grid3" style="margin-top:16px">
+        <div class="card"><h3>予約が手作業で埋まる</h3><p class="muted">DM/電話の往復で手間。営業時間外の取こぼしも。</p></div>
+        <div class="card"><h3>No-show/ドタキャン</h3><p class="muted">前日リマインドなしで当日キャンセルが発生。</p></div>
+        <div class="card"><h3>再来店のきっかけが作れない</h3><p class="muted">せっかくの既存顧客に継続的に接触できない。</p></div>
+        <div class="card"><h3>問い合わせ対応が分散</h3><p class="muted">SNS/メール/電話に散らばり、対応漏れが出る。</p></div>
+        <div class="card"><h3>配信の効果が測れない</h3><p class="muted">誰が来店したか、どの施策が効いたか不明。</p></div>
+        <div class="card"><h3>スタッフが疲弊</h3><p class="muted">単純なやり取りに時間を使い、本業に集中できない。</p></div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="section" id="solutions">
+      <h2>LINEでの解決アプローチ（課題→機能→期待効果）</h2>
+      <div class="grid3" style="margin-top:16px">
+        <div class="card"><h3>予約自動化</h3><p class="muted">日程選択→確定→前日リマインド→当日フォローまで自動。<br><b class="tick">期待効果：</b> 予約取こぼし減 / No-show減 / 現場負担軽減</p></div>
+        <div class="card"><h3>再来店オート施策</h3><p class="muted">来店後◯日でクーポン/案内を自動配信。<br><b class="tick">期待効果：</b> リピート率UP / LTV向上</p></div>
+        <div class="card"><h3>セグメント配信</h3><p class="muted">属性・来店履歴・反応別に最適な配信。<br><b class="tick">期待効果：</b> 無駄配信削減 / 反応率UP</p></div>
+        <div class="card"><h3>Q&Aボット</h3><p class="muted">営業時間・料金・アクセスなどを自動応答。<br><b class="tick">期待効果：</b> 問合せ対応の自動化 / 返信漏れ防止</p></div>
+        <div class="card"><h3>タグ×計測</h3><p class="muted">「誰が」「何に」反応したかを可視化。<br><b class="tick">期待効果：</b> 施策の継続改善 / 予算最適化</p></div>
+        <div class="card"><h3>決済・回数券連携</h3><p class="muted">回数券/サブスクの案内・決済までLINE内で完結。<br><b class="tick">期待効果：</b> 単価UP / 継続率UP</p></div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section class="section" id="beforeafter">
+      <h2>導入前 / 導入後の比較（イメージ）</h2>
+      <table class="compare" style="margin-top:12px">
+        <tr><th>項目</th><th>Before</th><th>After（LINE導入）</th></tr>
+        <tr><td>予約受付</td><td>DM/電話の往復、営業時間外は取れない</td><td><span class="tick">自動受付</span>：24時間、空き枠から即時確定</td></tr>
+        <tr><td>リマインド</td><td>手動で連絡、漏れが発生</td><td><span class="tick">自動配信</span>：前日・当日でNo-show削減</td></tr>
+        <tr><td>再来店施策</td><td>思いついた時だけ配信</td><td><span class="tick">ステップ設計</span>：来店後◯日で自動オファー</td></tr>
+        <tr><td>問い合わせ</td><td>複数チャネルで混乱</td><td><span class="tick">LINE集中</span>：Q&Aボット＋必要時だけ有人</td></tr>
+        <tr><td>効果測定</td><td>感覚で判断</td><td><span class="tick">タグ×CV</span>：誰に何が効いたか分かる</td></tr>
+        <tr><td>スタッフ負担</td><td>単純作業に時間</td><td><span class="tick">本業へ集中</span>：自動化で時短</td></tr>
+      </table>
+    </section>
+
+    <!-- SCENARIOS -->
+    <section class="section" id="scenarios">
+      <h2>業種別の“導入シナリオ例”</h2>
+      <div class="grid2" style="margin-top:12px">
+        <div class="card">
+          <h3>美容室</h3>
+          <div class="step" data-n="1">友だち追加 → スタイル提案/空き枠確認</div>
+          <div class="step" data-n="2">予約確定 → 前日リマインド</div>
+          <div class="step" data-n="3">来店後◯日 → 次回予約クーポン自動配信</div>
+        </div>
+        <div class="card">
+          <h3>整体院</h3>
+          <div class="step" data-n="1">症状ヒアリングフォーム（タグ付）</div>
+          <div class="step" data-n="2">最適メニュー提案 → 予約</div>
+          <div class="step" data-n="3">回数券/セルフケア動画を段階配信</div>
+        </div>
+        <div class="card">
+          <h3>飲食店</h3>
+          <div class="step" data-n="1">混雑状況/順番待ち通知</div>
+          <div class="step" data-n="2">雨の日/平日限定の自動クーポン</div>
+          <div class="step" data-n="3">常連向け先行案内（セグメント配信）</div>
+        </div>
+        <div class="card">
+          <h3>学習塾</h3>
+          <div class="step" data-n="1">体験申し込み → 欠席/振替連絡ボット</div>
+          <div class="step" data-n="2">保護者向け連絡/請求の自動化</div>
+          <div class="step" data-n="3">成績別の学習プラン配信</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 90-DAY ROADMAP -->
+    <section class="section" id="roadmap">
+      <h2>導入後90日のロードマップ（目安）</h2>
+      <div class="grid2" style="margin-top:12px">
+        <div class="card">
+          <h3>Day 1–14：設計＆初期公開</h3>
+          <ul class="muted">
+            <li>挨拶/メニュー/予約フローの試作 → 公開</li>
+            <li>既存顧客へ友だち追加のご案内</li>
+            <li>基礎タグ/計測の設定</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Day 15–30：自動化＆配信開始</h3>
+          <ul class="muted">
+            <li>前日リマインド/来店後ステップ配信を稼働</li>
+            <li>よくある質問のボット化</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Day 31–60：セグメント最適化</h3>
+          <ul class="muted">
+            <li>反応別の配信分岐（タグ活用）</li>
+            <li>効果が高い施策へ注力、不要施策を停止</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Day 61–90：収益施策の強化</h3>
+          <ul class="muted">
+            <li>回数券/サブスク/紹介施策の導入</li>
+            <li>月次レポートで改善を継続</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT / SIMPLE SIM -->
+    <section class="section" id="impact">
+      <h2>導入効果をイメージするための“簡易シミュレータ”（目安）</h2>
+      <div class="grid3" style="margin-top:16px">
+        <div class="card"><h3>再来店での増分</h3><p class="muted">登録者数 × 再来店率の改善幅 × 平均単価 = 月間増分売上（目安）</p></div>
+        <div class="card"><h3>No-show削減効果</h3><p class="muted">月予約数 × No-show減少率 × 平均単価 = 機会損失の回収額（目安）</p></div>
+        <div class="card"><h3>時短の価値</h3><p class="muted">（月の自動化時間 × 人件費時給）= 自動化の“時間価値”</p></div>
+      </div>
+      <p class="muted" style="margin-top:8px">※ あくまで目安。実際の効果は業種・状況により変化します。</p>
+    </section>
+
+    <!-- CONTACT / FINAL CTA -->
+    <section class="section" id="contact">
+      <h2>お仕事の連絡はこちら（最後だけに置いています）</h2>
+      <p class="muted">ここまでお読みいただきありがとうございます。ご相談やお見積りは、以下からお気軽にご連絡ください。</p>
+      <p>
+        <a class="btn" href="#">お問い合わせフォーム</a>
+        <a class="btn ghost" href="https://line.me/R/ti/p/%40609dabno">LINEで連絡する</a>
+      </p>
+      <p class="muted">※ まずは質問のみでもOKです。要件が固まっていなくても大丈夫です。</p>
+    </section>
+
+    <footer>
+      <p>© 2025 らくらくLINE構築｜<span class="badge">このページはサンプルです</span></p>
+    </footer>
+  </div>
+</body>
+</html>
